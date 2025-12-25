@@ -3,16 +3,13 @@
   "version": "0.3.0",
   "description": "Skyport is an open source panel for managing and operating game servers and applications built using Node.js with Express and Docker.",
   "main": "index.js",
-  "bin": {
-    "skyport": "./exec/bin/index.js"
-  },
   "scripts": {
     "start": "node index.js",
     "start:dev": "nodemon index.js",
     "dev": "concurrently \"npm run start\" \"npm run watch\"",
     "watch": "browser-sync start --config bs-config.js",
-    "seed": "skyport seed",
-    "createUser": "skyport createUser",
+    "seed": "./exec/bin/index.js seed",
+    "createUser": "./exec/bin/index.js createUser",
     "build:css": "npx @tailwindcss/cli -i ./public/tw.conf -o ./public/assets/tailwind.css --watch"
   },
   "author": "skyport-team",
