@@ -8,8 +8,8 @@
     "start:dev": "nodemon index.js",
     "dev": "concurrently \"npm run start\" \"npm run watch\"",
     "watch": "browser-sync start --config bs-config.js",
-    "seed": "./exec/bin/index.js seed",
-    "createUser": "./exec/bin/index.js createUser",
+    "seed": " node exec/bin/index.js seed",
+    "createUser": "node exec/bin/index.js createUser",
     "build:css": "npx @tailwindcss/cli -i ./public/tw.conf -o ./public/assets/tailwind.css --watch"
   },
   "author": "skyport-team",
